@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{trample}
-  s.version = "0.1.0"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Golick"]
@@ -61,6 +61,10 @@ Gem::Specification.new do |s|
      "test/timer_test.rb",
      "test/trample_test.rb"
   ]
+  s.add_dependency('sevenwire-http_client')
+  s.add_dependency('log4r')
+  s.add_dependency('hpricot')
+  s.add_dependency('thor')
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
