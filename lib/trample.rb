@@ -1,6 +1,6 @@
-gem 'sevenwire-rest-client'
+gem 'sevenwire-http_client'
 require 'log4r'
-require 'rest_client'
+require 'http_client'
 require 'hpricot'
 
 module Trample

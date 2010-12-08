@@ -36,7 +36,7 @@ module Trample
       end
 
       def get(page)
-        RestClient.get(page.url, :cookies => cookies)
+        HttpClient.get(page.url, :cookies => cookies)
       end
 
       def post(page)
@@ -44,7 +44,7 @@ module Trample
         if authenticity_token = parse_authenticity_token(@last_response)
           params.merge!(:authenticity_token => authenticity_token)
         end
-        RestClient.post(page.url, params, :cookies => cookies)
+        HttpClient.post(page.url, params, :cookies => cookies)
       end
 
       def parse_authenticity_token(html)
