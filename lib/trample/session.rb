@@ -26,7 +26,7 @@ module Trample
         # this is ugly, but it's the only way that I could get the test to pass
         # because rr keeps a reference to the arguments, not a copy. ah well.
         @cookies = cookies.merge(last_response.cookies)
-        logger.info "#{page.request_method.to_s.upcase} #{page.url} #{response_times.last}s #{last_response.code}"
+        logger.info "#{Thread.current.object_id} #{page.request_method.to_s.upcase} #{page.url} #{response_times.last}s #{last_response.code}"
       end
 
       def request(page)
